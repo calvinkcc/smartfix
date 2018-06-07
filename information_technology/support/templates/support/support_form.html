@@ -1,0 +1,54 @@
+{% extends "support_base.html" %}
+{% block content %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+<head>
+  <link rel="stylesheet" href="{% static 'information_technology/css/support.css' %}">
+</head>
+
+<!-- <div class="container">
+    <div class="jumbotron">
+      <h1>Please fill out this form then submit it.</h1>
+      <h2>We will get back to you as soon as possible.</h2>
+    </div>
+    <div class="container" id="top">
+      <div class="row">
+        <div class="col-sm">
+          <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" class='btn btn-default' value="Submit Form">
+          </form>
+        <div class="col-sm">
+            Contact US
+
+          </div>
+        </div>
+      </div>
+  </div>
+</div> -->
+<section id="contact-us">
+  <div class="wrap">
+    <div class="panel-left">
+      <h1>Let us help you!</h1>
+      <h2>Fill out the form and submit it!</h2>
+      <h3>We will get back to you as soon as possible.</h3>
+      <div class="contact-form">
+        <form method="POST">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          <input type="submit" class='btn btn-default' value="Submit Form">
+        </form>
+      </div>
+    </div>
+    <div class="panel-right">
+      <h3>Contact Us</h3>
+      <p>For any support, questions or inquires: <br>
+          Email us at
+        <a href="mailto:support@smartfix.com" target="_blank">support@smartfix.com</a>
+          <br> or call us at: 123-123-1234</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
